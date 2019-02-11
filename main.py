@@ -25,6 +25,7 @@ cv_results = stackedreg.cv(params = paramS,
                     verbose_eval = True)
 
 print(cv_results["test-rmse-mean"].tail(1))
+
 cv_results.loc[cv_results['test-rmse-mean'].idxmin()]
 
 res = stackedreg.fit()

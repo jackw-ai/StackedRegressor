@@ -97,7 +97,8 @@ xg_reg.set_params(n_estimators=cv_results.shape[0])
 
 xg_reg.fit(X_train,y_train)
 
-scoreRMSE(xg_reg, X_train, y_train)
+scoreRMSE(xg_reg, X_train, y_train, plot = True)
+
 
 """ Random Forest """
 
@@ -135,6 +136,7 @@ ada.fit(X_train, y_train)
 
 scoreRMSE(ada, X_train, y_train, plot = False)
 
+
 """ SVM """
 
 svr = svm.SVR(cache_size = 500, kernel= 'linear')
@@ -142,6 +144,7 @@ svr = svm.SVR(cache_size = 500, kernel= 'linear')
 svr.fit(X_train, y_train)
 
 scoreRMSE(svr, X_train, y_train, plot = False)
+
 
 """ Neural Net """
 def build_NN():

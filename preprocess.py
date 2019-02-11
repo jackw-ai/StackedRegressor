@@ -98,9 +98,6 @@ def plot_loss(history, model_type = 'xgb'):
         plt.legend(loc = 'upper right')
         plt.show()
 
-
-
-
 """ Feature Selection """
 
 def filter_features(X_train, y_train, threshold = 0):
